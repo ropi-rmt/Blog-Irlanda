@@ -146,3 +146,24 @@
 .dropdown-menu li a:hover {
     background: #eee;
 }
+
+/*MAIN*/
+
+.inicio{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: white;
+    height: 40vh;
+}
+/*FOOTER*/
+
+.footer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: #b3e6ae;
+    height: 25vh;
+}
