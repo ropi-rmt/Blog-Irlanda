@@ -29,9 +29,19 @@
             <ul class="nav-left">
                 <li><a href="./index.html">Inicio</a></li>
                 <li><a href="./PAGES/historia.html">Historia de Irlanda</a></li>
-                <li><a href="./PAGES/lugares.html">Qué Visitar</a></li>
+                <li class="dropdown">
+                    <a href="./PAGES/lugares.html">Qué Visitar</a>
+            
+                    <!-- dropdown -->
+                    <ul class="dropdown-menu">
+                        <li><a href="./PAGES/lugares-Dublin.html">Dublín</a></li>
+                        <li><a href="./PAGES/lugares-Galway.html">Galway</a></li>
+                        <li><a href="./PAGES/lugares-Cork.html">Cork</a></li>
+                        <li><a href="./PAGES/lugares-Connemara.html">Connemara</a></li>
+                    </ul>
+                </li>
+            
             </ul>
-
             <div class="logo1">
                 <a href="./index.html"><img src="./ASSETS/Logo-1.png" alt="Logo"></a>
             </div>
@@ -44,20 +54,26 @@
 
             <!--<button class="hamburger" id="hamburger">☰</button>-->
         </nav>
+
     </header>
 
 
 
-        <main>
+    <main>
+
+        <div>
+            <form action="/" method="get">
+                <input type="search" name="s" placeholder="Buscar..." required>
+                <button type="submit">Buscar</button>
+            </form>
+        </div>
+        <!-- en el footer o final de main me gustaria q hubiera una seccion de busqueda como en https://happytowander.com/travel-guides/-->
+    </main>
+
+    <footer>
 
 
-<!-- en el footer o final de main me gustaria q hubiera una seccion de busqueda como en https://happytowander.com/travel-guides/-->
-        </main>
-
-<footer>
-
-    
-</footer>
+    </footer>
 </body>
 
 </html>

@@ -32,7 +32,7 @@
   }
   */
 
-  * {
+* {
     margin: 5;
     padding: 0;
 
@@ -47,7 +47,8 @@
 
     /*border-bottom: 1px solid #e5e5e5;*/
     top: 0;
-    z-index: 1000;*/
+    z-index: 1000;
+    
 }
 
 .navbar {
@@ -70,15 +71,19 @@
     list-style-type: none;
 }
 
+.nav-left li{
+    position: relative;
+}
+
 .nav-left a {
     color: darkgreen;
     font-family: "Geom", sans-serif;
     font-weight: 500;
-    font-size:3vh;
+    font-size: 3vh;
     text-decoration: none;
 }
 
-.nav-left a:hover{
+.nav-left a:hover {
     color: white;
 }
 
@@ -102,9 +107,42 @@
     text-decoration: none;
 }
 
-.nav-right a:hover{
+.nav-right a:hover {
     color: white;
 }
+
 .logo1 img {
     height: 35vh;
+}
+
+/*DROPDOWN*/
+
+/* Evitar que las listas anidadas se vean siempre */
+.dropdown .dropdown-menu {
+    display: none;
+    position: absolute;
+    background: white;
+    padding: 10px 0;
+    margin: 0;
+    list-style: none;
+    border-radius: 6px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+/* Mostrar dropdown al hacer hover */
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+/* Estilo de las opciones del dropdown */
+.dropdown-menu li a {
+    display: block;
+    padding: 8px 20px;
+    color: darkgreen;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.dropdown-menu li a:hover {
+    background: #eee;
 }
