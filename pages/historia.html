@@ -5,53 +5,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>where the fields are green </title>
+    <title>Historia de Irlanda</title>
 
-    <link rel="shortcut icon" href="./ASSETS/Trebol.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../ASSETS/Trebol.png" type="image/x-icon">
 
 
-    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="../style/style.css">
 
 
 </head>
 
 <body>
-    <!---- dentro del header me gustaria tener el logo en el medio y la navegacion si se puede hacerlo con menu desplegable de bootstrap.
-
-    las secciones pueden ser:
-    historia de irlanda/los mejores lugares para visitar/comida y alojamiento/consejos
-    
-    tener como referencia https://www.mibauldeblogs.com/ -->
 
     <header class="header">
 
         <nav class="navbar">
             <ul class="nav-left">
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./PAGES/historia.html">Historia de Irlanda</a></li>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="historia.html">Historia de Irlanda</a></li>
                 <li class="dropdown">
-                    <a href="./PAGES/lugares.html">Qué Visitar</a>
+                    <a href="lugares.html">Qué Visitar</a>
 
                     <ul class="dropdown-menu">
-                        <li><a href="./PAGES/LUGARES/cork.html">Cork</a></li>
-                        <li><a href="./PAGES/LUGARES/dingle.html">Dingle</a></li>
-                        <li><a href="./PAGES/LUGARES/donegal.html">Donegal</a></li>
-                        <li><a href="./PAGES/LUGARES/dublin.html">Dublín</a></li>
-                        <li><a href="./PAGES/LUGARES/galway.html">Galway</a></li>
-                        <li><a href="./PAGES/LUGARES/killarney.html">Killarney</a></li>
-                        <li><a href="./PAGES/LUGARES/kilkenny.html">Kilkenny</a></li>
-                        <li><a href="./PAGES/LUGARES/sligo.html">Sligo</a></li>
-                        <li><a href="./PAGES/LUGARES/westport.html">Westport</a></li>
+                        <li><a href="LUGARES/cork.html">Cork</a></li>
+                        <li><a href="LUGARES/dingle.html">Dingle</a></li>
+                        <li><a href="LUGARES/donegal.html">Donegal</a></li>
+                        <li><a href="LUGARES/dublin.html">Dublín</a></li>
+                        <li><a href="LUGARES/galway.html">Galway</a></li>
+                        <li><a href="LUGARES/killarney.html">Killarney</a></li>
+                        <li><a href="LUGARES/kilkenny.html">Kilkenny</a></li>
+                        <li><a href="LUGARES/sligo.html">Sligo</a></li>
+                        <li><a href="LUGARES/westport.html">Westport</a></li>
                     </ul>
                 </li>
 
             </ul>
             <div class="logo1">
-                <a href="./index.html"><img src="./ASSETS/Logo-1.png" alt="Logo"></a>
+                <a href="../index.html"><img src="../ASSETS/Logo-1.png" alt="Logo"></a>
             </div>
 
             <ul class="nav-right">
-                <li class="dropdown"><a href="./PAGES/curiosidades.html">Curiosidades</a>
+                <li class="dropdown"><a href="curiosidades.html">Curiosidades</a>
                     <ul class="dropdown-menu">
                         <li><a href="./PAGES/LUGARES/cork.html">Cork</a></li>
                         <li><a href="./PAGES/LUGARES/dingle.html">Dingle</a></li>
@@ -59,36 +53,55 @@
                     </ul>
                 </li>
 
-                <li class="dropdown"><a href="./PAGES/tips.html">Consejos</a>
+                <li class="dropdown"><a href="tips.html">Consejos</a>
                     <ul class="dropdown-menu">
                         <li><a href="./PAGES/LUGARES/cork.html">Cork</a></li>
                         <li><a href="./PAGES/LUGARES/dingle.html">Dingle</a></li>
 
                     </ul>
                 </li>
-                <li><a href="./PAGES/contacto.html">Contacto</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
             </ul>
 
-            <!--<button class="hamburger" id="hamburger">☰</button>-->
+            
         </nav>
 
     </header>
 
-
-
-    <main>
-
-        <div>
-            <form action="/" method="get">
-                <input type="search" name="s" placeholder="Buscar..." required>
-                <button type="submit">Buscar</button>
+        <main class="contacto">
+    
+            
+            <form class="form">
+                <label> Nombre: </label>
+                <input type="text" placeholder="Tu Nombre">
+                
+                <label>Mail: </label> 
+                <input type="email" placeholder="Tu Email">
+        
+                <label>Dejanos tu mensaje!  </label>
+                <textarea placeholder="Dejanos tu mensaje aca!"></textarea>
+        
+                <input type="submit" value="Enviar">
+                <input type="reset" value="Reiniciar">
+        
             </form>
-        </div>
-        <!-- en el footer o final de main me gustaria q hubiera una seccion de busqueda como en https://happytowander.com/travel-guides/-->
+        
+            <section class="busqueda">
+                <h3>¿A dónde querés viajar ahora?</h3>
+                <p>Buscá ciudades, consejos o destinos de Irlanda</p>
+    
+                <form class="busqueda-form" action="/" method="get">
+                    <input type="search" name="s" placeholder="Ej: Galway, Cork, consejos..." required>
+                    <button type="submit">Buscar</button>
+                </form>
+            </section>
+   
     </main>
 
     <footer>
-
+        <div class="footer">
+            <h3>Hecho por Ropi</h3>
+        </div>
 
     </footer>
 </body>
