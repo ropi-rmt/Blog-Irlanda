@@ -32,7 +32,7 @@
   }
   */
 
-*{
+* {
     margin: 5;
     padding: 0;
     box-sizing: border-box;
@@ -50,7 +50,7 @@
     /*border-bottom: 1px solid #e5e5e5;*/
     top: 0;
     z-index: 1000;
-    
+
 }
 
 .navbar {
@@ -73,7 +73,7 @@
     list-style-type: none;
 }
 
-.nav-left li{
+.nav-left li {
     position: relative;
 }
 
@@ -128,7 +128,7 @@
     margin: 0;
     list-style: none;
     border-radius: 6px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 
 /* Mostrar dropdown al hacer hover */
@@ -151,7 +151,7 @@
 
 /*MAIN*/
 
-.inicio{
+.inicio {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -164,74 +164,122 @@ h2 {
     font-family: "Geom", sans-serif;
     font-weight: 500;
     font-size: 100px;
- 
+
 }
 
-h2.bienvenida{
+h2.bienvenida {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 500;
-    font-size: 3vh;  
-    padding: 10px; 
+    font-size: 3vh;
+    padding: 10px;
     margin: 20px;
 }
 
-h3{
+h3 {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 500;
-    font-size: 30px;  
-    padding: 20px; 
+    font-size: 30px;
+    padding: 20px;
     text-align: center;
 
 }
 
-.copete{
+.copete {
     background-color: rgb(177, 177, 177);
 }
-h4{
+
+h4 {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 900;
-    font-size: 40px; 
-    padding-left: 20px; 
+    font-size: 40px;
+    padding-left: 20px;
     padding-right: 20px;
 }
 
-p{
+p {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 500;
-    font-size: 3vh; 
-    padding-left: 50px; 
+    font-size: 3vh;
+    padding-left: 50px;
     padding-right: 50px;
 }
 
-.link{
+.link {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 500;
-    font-size: 30px; 
-    text-decoration: none; 
-   padding: 10px;
+    font-size: 30px;
+    text-decoration: none;
+    padding: 10px;
 }
 
-a:hover{
+a:hover {
     color: darkgreen;
 }
 
-.descubre{
+.descubre {
     color: white;
     font-family: "Geom", sans-serif;
     font-size: 30px;
     text-align: center;
     text-decoration: none;
     border: none;
-    background-color:  #b3e6ae; 
+    background-color: #b3e6ae;
     padding: 20px;
     margin: 20px;
 }
 
+.contacto {
+    display: grid;
+
+    grid-column: auto;
+    gap: 10px;
+    width: 50vw;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 50vw;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+label{
+    color: white;
+    font-family: "Geom", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: #b3e6ae;
+    padding: 5px;
+    margin: 5px; 
+}
+
+.buttonform{
+    color: darkgreen;
+    font-family: "Geom", sans-serif;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    border: none;
+    background-color: #b3e6ae;
+    padding: 5px;
+    margin: 5px;
+}
+
+.buttonform:hover{
+    color: darkgreen;
+    opacity: 50%;
+}
 /* SECCIÓN DE BÚSQUEDA */
 
 .busqueda {
@@ -239,7 +287,7 @@ a:hover{
     margin: 30px;
     padding: 10px;
     text-align: center;
-   
+
 }
 
 .busqueda h3 {
@@ -291,17 +339,17 @@ a:hover{
 /*FOOTER*/
 
 footer {
-  display: flex;
-background-color: #b3e6ae;
-justify-content: center;
-align-items: center; 
+    display: flex;
+    background-color: #b3e6ae;
+    justify-content: center;
+    align-items: center;
 }
 
-footer h3{
+footer h3 {
     color: darkgreen;
-font-family: "Geom", sans-serif;
-font-weight: 500;
-font-size: 20px; 
-text-align: center;
+    font-family: "Geom", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
 
 }
