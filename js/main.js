@@ -96,7 +96,7 @@ if (disponibles.length > 0) {
 }
 */
 
-//INTENTO 4 - manual de practicas
+//INTENTO 4 - manual de practicas y clase funciones de orden superior
 
 function solicitarDatosUsuario() {
     let nombre = prompt("Ingrese Nombre: ");
@@ -154,11 +154,39 @@ function ciudadesDisponibles() {
 
 }
 
+const ciudades =[
+    {
+        nombre: "cork",
+        precio: 1200
+    },
+    {
+        nombre: "dublin",
+        precio: 2000
+    },
+    {
+        nombre: "galway",
+        precio: 1500
+    },
+]
+
+
+
 function presupuestoCliente(){
     let presupuesto = parseFloat(prompt("¿Cuál es tu presupuesto para tu viaje? (en dolares)"));
+    const filtrados = ciudades.filter(ciudad => ciudad.precio <=presupuesto)
+    const nombresCiudades = filtrados.map(ciudad => ciudad.nombre);
+    console.log(nombresCiudades)
 
-    switch(presupuesto){}
+  if (filtrados.length > 0) {
+  console.log("Con tu presupuesto podés visitar: " + nombresCiudades.join(", "));
+  alert("Con tu presupuesto podés visitar: " + nombresCiudades.join(", "));
+} else {
+  console.log("No tenés fondos suficientes");
+  alert("No tenés fondos suficientes");
+}
+    
 }
 
 solicitarDatosUsuario();
 ciudadesDisponibles();
+presupuestoCliente();
