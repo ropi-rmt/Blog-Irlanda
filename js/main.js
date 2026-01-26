@@ -1,10 +1,10 @@
+//ENTREGA 1
+
 // la idea es armar un presupuesto de viaje
 //se definen varias ciudades con un costo definido
 //el usuario tendra que ingresar con que presupuesto cuenta y de esa forma se le daran las opciones posibles
 
-//INTENTO 4 - manual de practicas y clase funciones de orden superior
-
-function solicitarDatosUsuario() {
+/*function solicitarDatosUsuario() {
     let nombre = prompt("Ingrese Nombre: ");
     let genero = (prompt("Ingrese F para femenino, M para masculino o X para otros")).toLowerCase();
     let mensaje
@@ -95,4 +95,8 @@ function presupuestoCliente(){
 
 solicitarDatosUsuario();
 ciudadesDisponibles();
-presupuestoCliente();
+presupuestoCliente();*/
+
+//ENTREGA 2
+//Agregar cards en la pagina principal de "lugares/que visitar", por si en un futuro quiero ir agregando mas ciudades
+//lo mismo en curiosidades, porq ahi lo puedo hacer más como entradas de blog "h2/p/a" titulo, pequeño copete y q tenga el link al articulo
