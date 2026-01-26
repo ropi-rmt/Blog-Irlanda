@@ -336,6 +336,22 @@ label{
     background-color: #1f5f2a;
 }
 
+.busqueda-form {
+    padding: 15px 30px;
+    font-family: "Geom", sans-serif;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: darkgreen;
+    color: white;
+}
+
+.busqueda-form:hover {
+    color: #b3e6ae;
+}
+
+
 /*FOOTER*/
 
 footer {
@@ -351,5 +367,46 @@ footer h3 {
     font-weight: 500;
     font-size: 20px;
     text-align: center;
+
+}
+
+/*CARD LUGARES*/
+
+.galeria {
+    display: flex;
+    
+    gap: 15px;
+    justify-content: space-around;
+    align-items: center;
+    text-decoration: none;
+}
+
+.cardCiudad {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    height: auto;
+    text-decoration: none;
+    background-color: rgb(178, 142, 211);
+    padding-bottom: 20px;
+}
+
+
+.descripcionCard{
+  color: darkgreen;
+    font-family: "Geom", sans-serif;
+    font-weight: 500;
+    font-size: 20px;
+    text-align: center;
+  
+}
+.producto a {
+    text-decoration: none;
+}
+
+.imagenCardCiudad{
+    width: 25vw;
 
 }

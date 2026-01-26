@@ -100,3 +100,53 @@ presupuestoCliente();*/
 //ENTREGA 2
 //Agregar cards en la pagina principal de "lugares/que visitar", por si en un futuro quiero ir agregando mas ciudades
 //lo mismo en curiosidades, porq ahi lo puedo hacer más como entradas de blog "h2/p/a" titulo, pequeño copete y q tenga el link al articulo
+
+//CARD LUGARES
+
+const ciudades = [
+    {
+        nombre: "Cork",
+        descripcion: "Paseos junto al río, museos peculiares y un mercado gastronómico del siglo XVIII; lánzate a visitar la ciudad de Cork",
+        link: "./lugares/cork.html",
+        imagen: "../assets/Cork1.webp",
+    },
+    {
+        nombre: "Dingle",
+        descripcion: "Prepárate para que este cabo majestuoso en el tramo de la Ruta Costera del Atlántico del condado de Kerry te robe el corazón",
+        link: "./lugares/dingle.html",
+        imagen: "../assets/Dingle1.webp",
+    },
+    {
+        nombre: "Galway",
+        descripcion: "Esta ciudad portuaria de la Ruta Costera del Atlántico tiene un rico pasado medieval. Hoy es un animado centro rebosante de pubs tradicionales, calles coloridas y el encanto de la costa oeste.",
+        link: "./lugares/galway.html",
+        imagen: "../assets/Galway1.webp",
+
+    },
+]
+
+function agregarCiudades(ciudades) {
+
+    const contenedor = document.getElementById("card-lugares");
+
+    for (const ciudad of ciudades) {
+        const card = document.createElement("section");
+
+        card.innerHTML = `
+        <div class="cardCiudad">
+        	<img src="${ciudad.imagen}" class="imagenCardCiudad">
+					<a href="${ciudad.link}"><h4>${ciudad.nombre}</h><a/>
+                    <p class="descripcionCard">${ciudad.descripcion}
+					<button class="busqueda-form">Saber más</button>
+                    </div>
+        `
+
+        contenedor.appendChild(card)
+
+    }
+
+}
+
+agregarCiudades(ciudades)
+
+
