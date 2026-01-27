@@ -337,16 +337,6 @@ label {
     background-color: #1f5f2a;
 }
 
-.busqueda-form {
-    padding: 15px 30px;
-    font-family: "Geom", sans-serif;
-    font-size: 18px;
-    border-radius: 30px;
-    border: none;
-    cursor: pointer;
-    background-color: darkgreen;
-    color: white;
-}
 
 .busqueda-form:hover {
     color: #b3e6ae;
