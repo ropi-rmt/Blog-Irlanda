@@ -135,9 +135,9 @@ function agregarCiudades(ciudades) {
         card.innerHTML = `
         <div class="cardCiudad">
         	<img src="${ciudad.imagen}" class="imagenCardCiudad">
-					<h4>${ciudad.nombre}</h4>
+					<h4 class="tituloCard">${ciudad.nombre}</h4>
                     <p class="descripcionCard">${ciudad.descripcion}
-					<a href="${ciudad.link}"><button class="busqueda-form">Saber más</button></a>
+					<a href="${ciudad.link}"><button class="botonCard">Saber más</button></a>
                     </div>
         `
 

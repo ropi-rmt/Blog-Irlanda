@@ -252,7 +252,7 @@ a:hover {
     align-items: center;
 }
 
-label{
+label {
     color: white;
     font-family: "Geom", sans-serif;
     font-size: 15px;
@@ -261,10 +261,10 @@ label{
     border: none;
     background-color: #b3e6ae;
     padding: 5px;
-    margin: 5px; 
+    margin: 5px;
 }
 
-.buttonform{
+.buttonform {
     color: darkgreen;
     font-family: "Geom", sans-serif;
     font-size: 15px;
@@ -276,10 +276,11 @@ label{
     margin: 5px;
 }
 
-.buttonform:hover{
+.buttonform:hover {
     color: darkgreen;
     opacity: 50%;
 }
+
 /* SECCIÓN DE BÚSQUEDA */
 
 .busqueda {
@@ -374,7 +375,7 @@ footer h3 {
 
 .galeria {
     display: flex;
-    
+
     gap: 15px;
     justify-content: space-around;
     align-items: center;
@@ -387,27 +388,44 @@ footer h3 {
     justify-content: center;
     align-items: center;
     width: 25vw;
-    height: auto;
-    text-decoration: none;
-    background-color: rgb(178, 142, 211);
-    padding-bottom: 20px;
+    height: 700px;
+    background-color: #b3e6ae;
+
 }
 
-
-.descripcionCard{
-  color: darkgreen;
+.tituloCard{
+    color: rgb(44, 44, 44);
+    font-family: "Geom", sans-serif;
+    font-weight: 900;
+    font-size: 40px;
+    margin: 20px;
+   
+}
+.descripcionCard {
+    color: darkgreen;
     font-family: "Geom", sans-serif;
     font-weight: 500;
     font-size: 20px;
     text-align: center;
     text-decoration: none;
+    margin:20px;
   
 }
-.busqueda-form a {
-    text-decoration: none;
+
+.botonCard {
+    padding: 15px 30px;
+    font-family: "Geom", sans-serif;
+    font-size: 18px;
+    border-radius: 30px;
+    border: none;
+    cursor: pointer;
+    background-color: darkgreen;
+    color: white;
+margin: 20px;
 }
 
-.imagenCardCiudad{
+.imagenCardCiudad {
     width: 25vw;
 
 }
+
