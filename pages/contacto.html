@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+    <script defer src="../js/contacto.js"></script>
+
     <title>Contacto</title>
 
     <link rel="shortcut icon" href="../assets/Trebol.png" type="image/x-icon">
@@ -72,21 +74,23 @@
     
             <div class="contacto">
 
-            <form class="formulario">
-                <label> Nombre: </label>
-                <input type="text" placeholder="Tu Nombre">
+            <form id="miFormulario">
+                <label for="nombre"> Nombre: </label>
+                <input type="text" id="nombre" placeholder="Tu Nombre">
                 
-                <label>Mail: </label> 
-                <input type="email" placeholder="Tu Email">
+                <label for="email">Mail: </label> 
+                <input type="email" id="email" placeholder="Tu Email">
         
-                <label>Dejanos tu mensaje!  </label>
-                <textarea placeholder="Dejanos tu mensaje aca!"></textarea>
+                <label for="mensaje">Dejanos tu mensaje!  </label>
+                <textarea id="mensaje" placeholder="Dejanos tu mensaje aca!"></textarea>
         
                 <input class="buttonform" type="submit" value="Enviar">
                 <input class="buttonform" type="reset" value="Reiniciar">
         
             </form>
         
+            <p id="respuesta"></p>
+
             <section class="busqueda">
                 <h3>¿A dónde querés viajar ahora?</h3>
                 <p>Buscá ciudades, consejos o destinos de Irlanda</p>
