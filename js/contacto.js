@@ -30,6 +30,7 @@ formulario.addEventListener("submit", function (event) {
     respuesta.textContent = "Gracias por tu mensaje 😊";
 });
 
+//Material sobre eventos
 //https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
 //https://developer.mozilla.org/en-US/docs/Web/API/Node/textContent
 //https://www.youtube.com/watch?v=LI6RMcvfnt0
