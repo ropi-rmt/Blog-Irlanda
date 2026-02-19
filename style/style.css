@@ -221,9 +221,10 @@ a:hover {
     color: darkgreen;
 }
 
-.imagenCiudad{
+.imagenCiudad {
     width: 50vw;
 }
+
 .descubre {
     color: white;
     font-family: "Geom", sans-serif;
@@ -238,7 +239,7 @@ a:hover {
 
 /*HISTORIA*/
 
-.historia{
+.historia {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -248,7 +249,7 @@ a:hover {
 
 /*CURIOSIDADES*/
 
-.curiosidades{
+.curiosidades {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -256,7 +257,7 @@ a:hover {
     justify-items: center;
 }
 
-.listaTexto{
+.listaTexto {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 500;
@@ -265,6 +266,7 @@ a:hover {
     padding-right: 50px;
     margin: 30px;
 }
+
 /*CONTACTO*/
 .contacto {
     display: flex;
@@ -274,7 +276,7 @@ a:hover {
     justify-items: center;
 }
 
-#miFormulario{
+#miFormulario {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -313,7 +315,7 @@ label {
 
 /*ESTILO DE PAGINAS BAJO CONSTRUCCION*/
 
-.alojamiento{
+.alojamiento {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -321,7 +323,7 @@ label {
     justify-items: center;
 }
 
-.comida{
+.comida {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -329,13 +331,93 @@ label {
     justify-items: center;
 }
 
-.tips{
+.tips {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     justify-items: center;
 }
+
+/*COMENTARIOS*/
+
+
+.tituloComentario {
+    font-size: 40px;
+    padding: 0;
+    margin-bottom: 20px;
+    color: darkgreen;
+}
+
+.formComentario {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.formComentario input,
+.formComentario textarea {
+    font-family: "Geom", sans-serif;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+
+
+.formComentario button {
+    font-family: "Geom", sans-serif;
+    font-weight: 500;
+    font-size: 3vh;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.formComentario button:hover {
+    background-color: #b3e6ae;
+}
+
+/* Tarjetas de comentarios */
+.comentario-card {
+    background-color: white;
+    padding: 15px;
+    border-radius: 12px;
+    margin-bottom: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+    width: 400px;
+    align-items: center;
+
+}
+
+.comentario-nombre {
+    font-family: "Geom", sans-serif;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: darkgreen;
+}
+
+.comentario-texto {
+    font-family: "Geom", sans-serif;
+    font-size: 14px;
+    color: #333;
+}
+
+.lista-comentarios {
+    background-color: #b3e6ae;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 /* SECCIÓN DE BÚSQUEDA */
 
 .busqueda {
@@ -438,14 +520,15 @@ footer h3 {
 
 }
 
-.tituloCard{
+.tituloCard {
     color: rgb(44, 44, 44);
     font-family: "Geom", sans-serif;
     font-weight: 900;
     font-size: 40px;
     margin: 20px;
-   
+
 }
+
 .descripcionCard {
     color: darkgreen;
     font-family: "Geom", sans-serif;
@@ -453,8 +536,8 @@ footer h3 {
     font-size: 20px;
     text-align: center;
     text-decoration: none;
-    margin:20px;
-  
+    margin: 20px;
+
 }
 
 .botonCard {
@@ -466,11 +549,10 @@ footer h3 {
     cursor: pointer;
     background-color: darkgreen;
     color: white;
-margin: 20px;
+    margin: 20px;
 }
 
 .imagenCardCiudad {
     width: 25vw;
 
 }
-
