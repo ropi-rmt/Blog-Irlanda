@@ -25,13 +25,15 @@ formulario.addEventListener("submit", function (event) {
 
     formulario.reset();
 
-    /*https://youtu.be/EDIg8rqbrBM?si=M3ynjY0b4aoyv3JA
+    /*LIBRERIAS
+    https://youtu.be/EDIg8rqbrBM?si=M3ynjY0b4aoyv3JA
     *sweetalert
     *https://sweetalert2.github.io/
      * toastify
      *  https://apvarun.github.io/toastify-js/
      * Luxon
      *  https://moment.github.io/luxon/#/
+     * ANIMATE ON SCROLL -> chequear!
      */
 
     Swal.fire({
