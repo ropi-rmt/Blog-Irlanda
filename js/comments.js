@@ -24,6 +24,22 @@ formulario.addEventListener("submit", function (event) {
     localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
 
     formulario.reset();
+
+    /*https://youtu.be/EDIg8rqbrBM?si=M3ynjY0b4aoyv3JA
+    *sweetalert
+    *https://sweetalert2.github.io/
+     * toastify
+     *  https://apvarun.github.io/toastify-js/
+     * Luxon
+     *  https://moment.github.io/luxon/#/
+     */
+
+    Swal.fire({
+        title: "Tu Comentario fue Enviado con Éxito!",
+        text: "Gracias por visitar nuestra página!",
+        icon: "success",
+        draggable: true
+    });
 });
 
 function mostrarComentario(nombre, comentario) {
@@ -37,4 +53,6 @@ function mostrarComentario(nombre, comentario) {
 
     listaComentarios.appendChild(card);
 }
+
+
 
