@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <script defer src="../js/comments.js"></script>
     <script defer src="../js/contacto.js"></script>
 
     <title>Contacto</title>
@@ -67,10 +67,14 @@
     </header>
 
     <main>
-
+        <h4 class="titleContacto">Contactate con nosotros!</h4>
+        <p class="introContacto">
+            Si tenes consultas, preguntas o simplementes queres contactarte con nosotros, no dudes en completar este
+            formulario y te estaremos contestado a la brevedad.
+        </p>
         <div class="contacto">
 
-            <form id="miFormulario">
+            <form id="miFormulario" class="sectionComentarios">
                 <label for="nombre"> Nombre: </label>
                 <input type="text" id="nombre" placeholder="Tu Nombre">
 
@@ -86,6 +90,20 @@
             </form>
 
             <p id="respuesta"></p>
+
+            <section class="sectionComentarios">
+                <h3 class="tituloComentario">Dejanos tu comentario</h3>
+
+                <form id="formComentario" class="formComentario">
+                    <input type="text" id="nombre" placeholder="Tu nombre" required>
+                    <textarea id="comentario" placeholder="Escribí tu comentario" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <div id="listaComentarios" class="lista-comentarios">
+                    <h3 class="tituloComentario">Lo que dicen de nosotros!</h3>
+                </div>
+            </section>
 
             <section class="busqueda">
                 <h3>¿A dónde querés viajar ahora?</h3>
@@ -106,6 +124,7 @@
         </div>
 
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </body>
 
 </html>

@@ -196,6 +196,7 @@ h4 {
     padding-left: 20px;
     padding-right: 20px;
     margin: 30px;
+    text-align: center;
 }
 
 p {
@@ -284,6 +285,16 @@ a:hover {
     justify-items: center;
 }
 
+.introContacto{
+    color: rgb(44, 44, 44);
+    font-family: "Geom", sans-serif;
+    font-weight: 500;
+    font-size: 3vh;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin: 30px;
+    text-align: center; 
+}
 label {
     color: white;
     font-family: "Geom", sans-serif;
@@ -312,6 +323,41 @@ label {
     color: darkgreen;
     opacity: 50%;
 }
+
+#miFormulario input,
+#miFormulario textarea{
+    font-family: "Geom", sans-serif;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+#miFormulario input.buttonform  {
+    font-family: "Geom", sans-serif;
+    font-weight: 500;
+    font-size: 2vh;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: darkgreen;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+#miFormulario label{
+    font-family: "Geom", sans-serif;
+    font-weight: 500;
+    font-size: 3vh;
+    padding: 10px;
+    border: none;
+    border-radius: 8px;
+    background-color: #b3e6ae;
+    color: white; 
+}
+
 
 /*ESTILO DE PAGINAS BAJO CONSTRUCCION*/
 
@@ -479,6 +525,12 @@ label {
     color: #b3e6ae;
 }
 
+/*PREFOOTER*/
+.preFooter{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
 
 /*FOOTER*/
 

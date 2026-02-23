@@ -1,8 +1,8 @@
-//Formulario Submit
+/**Formulario Submit**/
 
-const formulario = document.getElementById("miFormulario")
+const contacto = document.getElementById("miFormulario")
 
-formulario.addEventListener("submit", function (event) {
+contacto.addEventListener("submit", function (event) {
     event.preventDefault();
 
 
@@ -19,16 +19,23 @@ formulario.addEventListener("submit", function (event) {
     localStorage.setItem("emailUsuario", email);
 
     console.log("Datos guardados en localStorage");
-    formulario.reset()
+    contacto.reset()
+
+    Swal.fire({
+        title: "Tu Consulta fue Enviada con Éxito!",
+        text: "Nos estaremos comunicando a la brevedad",
+        icon: "success",
+        draggable: true
+    });
 });
 
-const respuesta = document.getElementById("respuesta");
+/*const respuesta = document.getElementById("respuesta");
 
 formulario.addEventListener("submit", function (event) {
     event.preventDefault();
 
     respuesta.textContent = "Gracias por tu mensaje 😊";
-});
+});*/
 
 //Material sobre eventos
 //https://developer.mozilla.org/en-US/docs/Web/API/HTMLFormElement/submit_event
