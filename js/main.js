@@ -25,7 +25,7 @@ function agregarCiudades(ciudades) {
 
 async function cargarCiudades() {
     try {
-        const response = await fetch("/Blog-Irlanda/js/ciudades.json"); 
+        const response = await fetch("../js/ciudades.json"); 
 
         if (!response.ok) {
             throw new Error("No se pudo cargar el archivo JSON");
