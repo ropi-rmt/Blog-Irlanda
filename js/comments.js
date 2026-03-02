@@ -26,7 +26,7 @@ formulario.addEventListener("submit", function (event) {
 
     const fecha = new Date().toLocaleDateString();
 
-    
+
 
 
     const comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
@@ -48,6 +48,12 @@ function mostrarComentario(nombre, comentario, fecha) {
     const card = document.createElement("div");
     card.classList.add("comentario-card");
 
+    const indice = comentariosGuardados.findIndex(com =>
+        com.nombre === nombre &&
+        com.comentario === comentario &&
+        com.fecha === fecha
+    );
+
     card.innerHTML = `
         <div class="comentario-nombre">${nombre}</div>
         <div class="comentario-fecha">${fecha}</div>
@@ -59,18 +65,13 @@ function mostrarComentario(nombre, comentario, fecha) {
 
     botonEliminar.addEventListener("click", function () {
 
-        // Filtramos el array
-        comentariosGuardados = comentariosGuardados.filter(com =>
-            !(com.nombre === nombre &&
-              com.comentario === comentario &&
-              com.fecha === fecha)
-        );
+        botonEliminar.addEventListener("click", function () {
 
-        // Actualizamos localStorage
-        localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
-
-        // Eliminamos del DOM
-        card.remove();
+            comentariosGuardados.splice(indice, 1);
+    
+            localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
+    
+            card.remove();
     });
 
     listaComentarios.appendChild(card);
@@ -78,15 +79,15 @@ function mostrarComentario(nombre, comentario, fecha) {
 
 mostrarComentario(nombre, comentario, fecha);
 
-   /*LIBRERIAS
-    https://youtu.be/EDIg8rqbrBM?si=M3ynjY0b4aoyv3JA
-    *sweetalert
-    *https://sweetalert2.github.io/
-     * toastify
-     *  https://apvarun.github.io/toastify-js/
-     * Luxon
-     *  https://moment.github.io/luxon/#/
-     * ANIMATE ON SCROLL -> chequear!
-     */
+/*LIBRERIAS
+ https://youtu.be/EDIg8rqbrBM?si=M3ynjY0b4aoyv3JA
+ *sweetalert
+ *https://sweetalert2.github.io/
+  * toastify
+  *  https://apvarun.github.io/toastify-js/
+  * Luxon
+  *  https://moment.github.io/luxon/#/
+  * ANIMATE ON SCROLL -> chequear!
+  */
 
 
