@@ -90,18 +90,18 @@ mostrarComentario(nombre, comentario, fecha);
   * ANIMATE ON SCROLL -> chequear!
   */
 
- const formulario = document.getElementById("formComentario");
- const listaComentarios = document.getElementById("listaComentarios");
- 
- 
- // 🔹 Mostrar comentario en pantalla
- function mostrarComentario(com) {
- 
-     const card = document.createElement("div");
-     card.classList.add("comentario-card");
-     card.setAttribute("data-id", com.id);
- 
-     card.innerHTML = `
+const formulario = document.getElementById("formComentario");
+const listaComentarios = document.getElementById("listaComentarios");
+
+
+// 🔹 Mostrar comentario en pantalla
+function mostrarComentario(com) {
+
+    const card = document.createElement("div");
+    card.classList.add("comentario-card");
+    card.setAttribute("data-id", com.id);
+
+    card.innerHTML = `
          <div class="comentario-nombre">${com.nombre}</div>
          <div class="comentario-fecha">${com.fecha}</div>
          <div class="comentario-texto">${com.comentario}</div>
@@ -111,79 +111,79 @@ mostrarComentario(nombre, comentario, fecha);
              <button class="eliminar-btn">🗑 Eliminar</button>
          </div>
      `;
- 
-     listaComentarios.appendChild(card);
- }
- 
- 
- // 🔹 Cargar comentarios guardados
- document.addEventListener("DOMContentLoaded", function () {
- 
-     const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
- 
-     comentarios.forEach(com => mostrarComentario(com));
- });
- 
- 
- // 🔹 Evento submit
- formulario.addEventListener("submit", function (event) {
- 
-     event.preventDefault();
- 
-     const nombre = document.getElementById("nombre").value;
-     const comentarioTexto = document.getElementById("comentario").value;
- 
-     const fecha = new Date().toLocaleDateString();
- 
-     const nuevoComentario = {
-         id: Date.now(),
-         nombre: nombre,
-         comentario: comentarioTexto,
-         fecha: fecha,
-         likes: 0
-     };
- 
-     const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
- 
-     comentarios.push(nuevoComentario);
- 
-     localStorage.setItem("comentarios", JSON.stringify(comentarios));
- 
-     mostrarComentario(nuevoComentario);
- 
-     formulario.reset();
- });
- 
- 
- // 🔹 Delegación de eventos (like y eliminar)
- listaComentarios.addEventListener("click", function (event) {
- 
-     const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
- 
-     const card = event.target.closest(".comentario-card");
-     if (!card) return;
- 
-     const id = Number(card.getAttribute("data-id"));
- 
-     // ❤️ LIKE
-     if (event.target.classList.contains("like-btn")) {
- 
-         const comentario = comentarios.find(com => com.id === id);
-         comentario.likes++;
- 
-         localStorage.setItem("comentarios", JSON.stringify(comentarios));
- 
-         card.querySelector(".like-btn").textContent = `❤️ ${comentario.likes}`;
-     }
- 
-     // 🗑 ELIMINAR
-     if (event.target.classList.contains("eliminar-btn")) {
- 
-         const nuevosComentarios = comentarios.filter(com => com.id !== id);
- 
-         localStorage.setItem("comentarios", JSON.stringify(nuevosComentarios));
- 
-         card.remove();
-     }
- }); 
+
+    listaComentarios.appendChild(card);
+}
+
+
+// 🔹 Cargar comentarios guardados
+document.addEventListener("DOMContentLoaded", function () {
+
+    const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+    comentarios.forEach(com => mostrarComentario(com));
+});
+
+
+// 🔹 Evento submit
+formulario.addEventListener("submit", function (event) {
+
+    event.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const comentarioTexto = document.getElementById("comentario").value;
+
+    const fecha = new Date().toLocaleDateString();
+
+    const nuevoComentario = {
+        id: Date.now(),
+        nombre: nombre,
+        comentario: comentarioTexto,
+        fecha: fecha,
+        likes: 0
+    };
+
+    const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+    comentarios.push(nuevoComentario);
+
+    localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+    mostrarComentario(nuevoComentario);
+
+    formulario.reset();
+});
+
+
+// 🔹 Delegación de eventos (like y eliminar)
+listaComentarios.addEventListener("click", function (event) {
+
+    const comentarios = JSON.parse(localStorage.getItem("comentarios")) || [];
+
+    const card = event.target.closest(".comentario-card");
+    if (!card) return;
+
+    const id = Number(card.getAttribute("data-id"));
+
+   /* / // ❤️ LIKE
+    if (event.target.classList.contains("like-btn")) {
+
+        const comentario = comentarios.find(com => com.id === id);
+        comentario.likes++;
+
+        localStorage.setItem("comentarios", JSON.stringify(comentarios));
+
+        card.querySelector(".like-btn").textContent = `❤️ ${comentario.likes}`;
+    }
+*/
+    // 🗑 ELIMINAR
+    if (event.target.classList.contains("eliminar-btn")) {
+
+        const nuevosComentarios = comentarios.filter(com => com.id !== id);
+
+        localStorage.setItem("comentarios", JSON.stringify(nuevosComentarios));
+
+        card.remove();
+    }
+});
 
