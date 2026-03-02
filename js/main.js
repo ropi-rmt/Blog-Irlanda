@@ -25,21 +25,13 @@ function agregarCiudades(ciudades) {
 
 async function cargarCiudades() {
     try {
-        const response = await fetch("./ciudades.json");
-
-        if (!response.ok) {
-            throw new Error("No se pudo cargar el archivo JSON");
-        }
-
+        const response = await fetch("./ciudades.json"); 
         const data = await response.json();
-
         agregarCiudades(data);
-
     } catch (error) {
         console.error("Error al cargar las ciudades:", error);
     }
 }
 
 cargarCiudades();
-
 
