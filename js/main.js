@@ -32,11 +32,11 @@ async function cargarCiudades() {
         }
         const data = await response.json();
         agregarCiudades(data);
-        
+
     } catch (error) {
         console.error("Error al cargar las ciudades:", error);
     }
-}
+};
 
 cargarCiudades();
 
