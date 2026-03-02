@@ -33,6 +33,8 @@ formulario.addEventListener("submit", function (event) {
 
     localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
 
+    mostrarComentario(nombre, comentario, fecha);
+
     formulario.reset();
 
     Swal.fire({
@@ -46,12 +48,6 @@ function mostrarComentario(nombre, comentario, fecha) {
     const card = document.createElement("div");
     card.classList.add("comentario-card");
 
-    const indice = comentariosGuardados.findIndex(com =>
-        com.nombre === nombre &&
-        com.comentario === comentario &&
-        com.fecha === fecha
-    );
-
     card.innerHTML = `
         <div class="comentario-nombre">${nombre}</div>
         <div class="comentario-fecha">${fecha}</div>
@@ -59,16 +55,24 @@ function mostrarComentario(nombre, comentario, fecha) {
         <button class="btn-eliminar">Eliminar</button>
     `;
 
+    //BOTON ELIMINAR - EVENTO ELIMINAR
     const botonEliminar = card.querySelector(".btn-eliminar");
-
-
 
     botonEliminar.addEventListener("click", function () {
 
-        comentariosGuardados.splice(indice, 1);
+        const indice = comentariosGuardados.findIndex(com =>
+            com.nombre === nombre &&
+            com.comentario === comentario &&
+            com.fecha === fecha
+        );
 
-        localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
 
+
+        if (indice !== -1) {
+            comentariosGuardados.splice(indice, 1);
+
+            localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
+        }
         card.remove();
     });
 
