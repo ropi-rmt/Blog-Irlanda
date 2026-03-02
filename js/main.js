@@ -25,21 +25,18 @@ function agregarCiudades(ciudades) {
 
 async function cargarCiudades() {
     try {
-        const response = await fetch("./ciudades.json");
+        const response = await fetch("../js/ciudades.json"); 
 
         if (!response.ok) {
             throw new Error("No se pudo cargar el archivo JSON");
         }
-
         const data = await response.json();
-
         agregarCiudades(data);
-
+        
     } catch (error) {
         console.error("Error al cargar las ciudades:", error);
     }
 }
 
+cargarCiudades();
 
-// Ejecutamos la función cuando carga el DOM
-document.addEventListener("DOMContentLoaded", cargarCiudades);
