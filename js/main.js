@@ -25,7 +25,7 @@ function agregarCiudades(ciudades) {
 
 async function cargarCiudades() {
     try {
-        const response = await fetch("./js/ciudades.json"); 
+        const response = await fetch("../js/ciudades.json"); 
         const data = await response.json();
         agregarCiudades(data);
     } catch (error) {
