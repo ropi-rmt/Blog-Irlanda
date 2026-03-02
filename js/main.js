@@ -40,6 +40,6 @@ async function cargarCiudades() {
     }
 }
 
-document.addEventListener("DOMContentLoaded", cargarCiudades);
+cargarCiudades();
 
 
