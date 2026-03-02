@@ -3,7 +3,7 @@
 function agregarCiudades(ciudades) {
     const contenedor = document.getElementById("card-lugares");
 
-    contenedor.innerHTML = ""; // limpia por si se vuelve a ejecutar
+   /* contenedor.innerHTML = ""; // limpia por si se vuelve a ejecutar*/
 
     ciudades.forEach(ciudad => {
         const card = document.createElement("section");
