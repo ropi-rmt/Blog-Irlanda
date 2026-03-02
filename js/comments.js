@@ -17,7 +17,7 @@ formulario.addEventListener("submit", function (event) {
     const nombre = document.getElementById("nombre").value.trim();
     const comentario = document.getElementById("comentario").value.trim();
 
-
+//USO DE LIBRERIAS PARA VALIDACION DE USO DE TODOS LOS CAMPOS
     if (nombre === "" || comentario === "") {
         Swal.fire({
             icon: "error",
@@ -27,6 +27,7 @@ formulario.addEventListener("submit", function (event) {
         return;
     }
 
+    
     const fecha = new Date().toLocaleDateString();
 
     comentariosGuardados.push({ nombre, comentario, fecha });
