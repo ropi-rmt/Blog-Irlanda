@@ -63,15 +63,15 @@ function mostrarComentario(nombre, comentario, fecha) {
 
     const botonEliminar = card.querySelector(".btn-eliminar");
 
+
+
     botonEliminar.addEventListener("click", function () {
 
-        botonEliminar.addEventListener("click", function () {
+        comentariosGuardados.splice(indice, 1);
 
-            comentariosGuardados.splice(indice, 1);
-    
-            localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
-    
-            card.remove();
+        localStorage.setItem("comentarios", JSON.stringify(comentariosGuardados));
+
+        card.remove();
     });
 
     listaComentarios.appendChild(card);
