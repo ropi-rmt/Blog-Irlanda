@@ -165,17 +165,7 @@ listaComentarios.addEventListener("click", function (event) {
 
     const id = Number(card.getAttribute("data-id"));
 
-   /* / // ❤️ LIKE
-    if (event.target.classList.contains("like-btn")) {
-
-        const comentario = comentarios.find(com => com.id === id);
-        comentario.likes++;
-
-        localStorage.setItem("comentarios", JSON.stringify(comentarios));
-
-        card.querySelector(".like-btn").textContent = `❤️ ${comentario.likes}`;
-    }
-*/
+ 
     // 🗑 ELIMINAR
     if (event.target.classList.contains("eliminar-btn")) {
 
