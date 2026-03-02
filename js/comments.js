@@ -26,7 +26,7 @@ formulario.addEventListener("submit", function (event) {
 
     const fecha = new Date().toLocaleDateString();
 
-    mostrarComentario(nombre, comentario, fecha);
+    
 
 
     const comentariosGuardados = JSON.parse(localStorage.getItem("comentarios")) || [];
@@ -72,10 +72,11 @@ function mostrarComentario(nombre, comentario, fecha) {
         // Eliminamos del DOM
         card.remove();
     });
-    
+
     listaComentarios.appendChild(card);
 }
 
+mostrarComentario(nombre, comentario, fecha);
 
    /*LIBRERIAS
     https://youtu.be/EDIg8rqbrBM?si=M3ynjY0b4aoyv3JA
